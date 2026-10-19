@@ -1,0 +1,10 @@
+{
+  "title": "Lịch thi đấu",
+  "intro": "Dữ liệu mẫu gồm {league} và cup — cập nhật từ database.",
+  "upcoming": "Sắp diễn ra / đang đá",
+  "noUpcoming": "Chưa có trận trong khoảng thời gian này.",
+  "vs": "vs",
+  "recent": "Kết quả gần đây",
+  "noResults": "Chưa có trận đã kết thúc.",
+  "dash": "—"
+}

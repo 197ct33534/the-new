@@ -1,0 +1,5 @@
+{
+  "invalid": "Invalid email or password (minimum 8 characters).",
+  "googleLinked": "This email is linked to Google. Please sign in with Google.",
+  "taken": "This email is already registered."
+}

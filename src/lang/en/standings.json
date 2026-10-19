@@ -1,0 +1,15 @@
+{
+  "title": "Standings",
+  "intro": "Based on finished matches with scores in {league} (sample data).",
+  "empty": "Not enough finished matches for a table.",
+  "rank": "#",
+  "team": "Team",
+  "played": "P",
+  "won": "W",
+  "drawn": "D",
+  "lost": "L",
+  "gf": "GF",
+  "ga": "GA",
+  "gd": "GD",
+  "pts": "Pts"
+}

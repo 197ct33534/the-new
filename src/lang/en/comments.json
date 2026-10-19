@@ -1,0 +1,17 @@
+{
+  "title": "Comments",
+  "placeholder": "Write a comment…",
+  "placeholderLong": "Share your thoughts…",
+  "submit": "Post",
+  "submitLong": "Post comment",
+  "submitting": "Sending…",
+  "commentPrompt": "to comment.",
+  "sessionLoading": "Checking session…",
+  "formLabel": "Write a comment",
+  "noAccountYet": "No account yet?",
+  "reply": "Reply",
+  "cancelReply": "Cancel",
+  "replyPlaceholder": "Write a reply…",
+  "replySubmit": "Post reply",
+  "repliesHeading": "{count} replies"
+}

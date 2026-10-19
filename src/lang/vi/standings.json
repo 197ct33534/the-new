@@ -1,0 +1,15 @@
+{
+  "title": "Bảng xếp hạng",
+  "intro": "Tính từ các trận đã kết thúc có tỉ số trong giải {league} (dữ liệu mẫu).",
+  "empty": "Chưa có trận kết thúc để lập bảng.",
+  "rank": "#",
+  "team": "Đội",
+  "played": "Trận",
+  "won": "T",
+  "drawn": "H",
+  "lost": "B",
+  "gf": "BT",
+  "ga": "BB",
+  "gd": "HS",
+  "pts": "Đ"
+}

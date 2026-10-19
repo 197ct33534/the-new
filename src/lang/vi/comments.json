@@ -1,0 +1,17 @@
+{
+  "title": "Bình luận",
+  "placeholder": "Viết bình luận…",
+  "placeholderLong": "Chia sẻ ý kiến của bạn…",
+  "submit": "Gửi",
+  "submitLong": "Gửi bình luận",
+  "submitting": "Đang gửi…",
+  "commentPrompt": "để bình luận.",
+  "sessionLoading": "Đang kiểm tra phiên đăng nhập…",
+  "formLabel": "Viết bình luận",
+  "noAccountYet": "Chưa có tài khoản?",
+  "reply": "Trả lời",
+  "cancelReply": "Huỷ",
+  "replyPlaceholder": "Viết trả lời…",
+  "replySubmit": "Gửi trả lời",
+  "repliesHeading": "{count} trả lời"
+}

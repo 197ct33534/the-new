@@ -1,0 +1,13 @@
+{
+  "main": "Chính",
+  "news": "Tin tức",
+  "scheduleShort": "Lịch",
+  "standingsShort": "BXH",
+  "signIn": "Đăng nhập",
+  "register": "Đăng ký",
+  "account": "Tài khoản",
+  "admin": "Quản trị",
+  "signOut": "Thoát",
+  "searchNews": "Tìm kiếm tin",
+  "searchPlaceholder": "Tìm kiếm…"
+}

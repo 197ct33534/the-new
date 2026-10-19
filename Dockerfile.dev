@@ -1,0 +1,7 @@
+# Chỉ dùng với docker-compose.dev.yml — Node + openssl, không build production.
+FROM node:20-bookworm-slim
+WORKDIR /app
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends openssl ca-certificates \
+  && rm -rf /var/lib/apt/lists/*
+ENV NEXT_TELEMETRY_DISABLED=1

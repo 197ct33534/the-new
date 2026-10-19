@@ -1,0 +1,13 @@
+{
+  "main": "Main",
+  "news": "News",
+  "scheduleShort": "Schedule",
+  "standingsShort": "Table",
+  "signIn": "Sign in",
+  "register": "Register",
+  "account": "Account",
+  "admin": "Admin",
+  "signOut": "Sign out",
+  "searchNews": "Search news",
+  "searchPlaceholder": "Search…"
+}

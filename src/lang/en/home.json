@@ -1,0 +1,11 @@
+{
+  "featured": "Featured stories",
+  "viewAll": "View all",
+  "noArticles": "No published articles yet. Run npm run db:seed.",
+  "upcoming": "Upcoming matches",
+  "fullSchedule": "Full schedule",
+  "noMatches": "No matches scheduled.",
+  "cardNews": "News",
+  "cardSchedule": "Match schedule",
+  "cardStandings": "Standings"
+}

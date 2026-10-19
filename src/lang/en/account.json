@@ -1,0 +1,13 @@
+{
+  "title": "Account",
+  "pageSubtitle": "Sign-in details and display name.",
+  "emailLabel": "Email",
+  "roleLabel": "Role",
+  "subtitle": "Update your display name. Email used for sign-in is not changed here.",
+  "displayName": "Display name",
+  "save": "Save",
+  "saved": "Saved.",
+  "saving": "Saving…",
+  "needLogin": "You need to sign in.",
+  "invalidName": "Display name must be 1–120 characters."
+}

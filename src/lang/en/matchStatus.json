@@ -1,0 +1,7 @@
+{
+  "SCHEDULED": "Scheduled",
+  "LIVE": "Live",
+  "FINISHED": "Finished",
+  "POSTPONED": "Postponed",
+  "CANCELLED": "Cancelled"
+}

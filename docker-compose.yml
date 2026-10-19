@@ -1,0 +1,86 @@
+# Đầy đủ: PostgreSQL + app Next.js + cron (xuất bản bài hẹn giờ)
+# 1) cp docker/env.example .env  — sửa AUTH_SECRET, tuỳ chọn mật khẩu PostgreSQL
+#
+# Production (image build, next start — mỗi lần đổi code cần rebuild web):
+#   docker compose up --build
+#
+# Dev trong Docker (hot reload, mount mã nguồn — không cần rebuild khi sửa file):
+#   docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build web db
+#
+# Dev nhanh nhất trên máy: chỉ chạy db, app chạy local
+#   cp docker/env.example .env  — điền AUTH_SECRET; giữ DATABASE_URL → 127.0.0.1:5432
+#   npm run db:up && npm run dev   (hoặc npm run dev:local)
+#
+# Trình duyệt: http://localhost:3000  (theo WEB_PORT nếu đổi)
+
+name: the-new
+
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: the-new-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-the_new}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-the_new_secret}
+      POSTGRES_DB: ${POSTGRES_DB:-football_news}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    # Map 5432 ra máy host để kết nối từ ngoài stack (DBeaver, app local, mạng LAN).
+    # Tuỳ chọn đổi cổng host qua biến DB_PORT trong .env (vd. DB_PORT=15432).
+    ports:
+      - "${DB_PORT:-5432}:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-the_new} -d ${POSTGRES_DB:-football_news}"]
+      interval: 4s
+      timeout: 3s
+      retries: 20
+
+  web:
+    build: .
+    container_name: the-new-web
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:-the_new}:${POSTGRES_PASSWORD:-the_new_secret}@db:5432/${POSTGRES_DB:-football_news}?schema=public
+      AUTH_SECRET: ${AUTH_SECRET}
+      AUTH_URL: ${AUTH_URL:-http://localhost:3000}
+      AUTH_GOOGLE_ID: ${AUTH_GOOGLE_ID:-}
+      AUTH_GOOGLE_SECRET: ${AUTH_GOOGLE_SECRET:-}
+      UPSTASH_REDIS_REST_URL: ${UPSTASH_REDIS_REST_URL:-}
+      UPSTASH_REDIS_REST_TOKEN: ${UPSTASH_REDIS_REST_TOKEN:-}
+      CRON_SECRET: ${CRON_SECRET:-dev-cron-secret-change-in-production}
+      NODE_ENV: production
+    ports:
+      - "${WEB_PORT:-3000}:3000"
+    volumes:
+      - article_uploads:/app/public/uploads
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "node",
+          "-e",
+          "require('http').get('http://127.0.0.1:3000/api/health',r=>process.exit(r.statusCode===200?0:1)).on('error',()=>process.exit(1))",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 45s
+
+  cron:
+    build: ./docker/cron
+    container_name: the-new-cron
+    restart: unless-stopped
+    depends_on:
+      web:
+        condition: service_healthy
+    environment:
+      CRON_SECRET: ${CRON_SECRET:-dev-cron-secret-change-in-production}
+      CRON_BASE_URL: http://web:3000
+
+volumes:
+  pgdata:
+  article_uploads:

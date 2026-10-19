@@ -1,0 +1,13 @@
+{
+  "title": "Tài khoản",
+  "pageSubtitle": "Thông tin đăng nhập và tên hiển thị.",
+  "emailLabel": "Email",
+  "roleLabel": "Vai trò",
+  "subtitle": "Cập nhật tên hiển thị. Email dùng để đăng nhập không đổi tại đây.",
+  "displayName": "Tên hiển thị",
+  "save": "Lưu",
+  "saved": "Đã lưu.",
+  "saving": "Đang lưu…",
+  "needLogin": "Bạn cần đăng nhập.",
+  "invalidName": "Tên hiển thị từ 1–120 ký tự."
+}

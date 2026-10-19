@@ -1,0 +1,10 @@
+{
+  "title": "Match schedule",
+  "intro": "Sample data includes {league} and cups — served from the database.",
+  "upcoming": "Upcoming / live",
+  "noUpcoming": "No matches in this window.",
+  "vs": "vs",
+  "recent": "Recent results",
+  "noResults": "No finished matches yet.",
+  "dash": "—"
+}

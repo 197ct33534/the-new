@@ -1,0 +1,11 @@
+{
+  "backToNews": "← Tất cả tin",
+  "authorFallback": "Biên tập",
+  "userFallback": "Người dùng",
+  "jsonLdAuthor": "Tác giả",
+  "related": "Cùng chuyên mục",
+  "commentsHeading": "Bình luận ({count})",
+  "commentsTitle": "Bình luận",
+  "noComments": "Chưa có bình luận.",
+  "metaFallbackTitle": "Tin"
+}

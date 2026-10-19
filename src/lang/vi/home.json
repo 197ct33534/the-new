@@ -1,0 +1,11 @@
+{
+  "featured": "Tin nổi bật",
+  "viewAll": "Xem tất cả",
+  "noArticles": "Chưa có bài xuất bản. Chạy npm run db:seed.",
+  "upcoming": "Trận sắp tới",
+  "fullSchedule": "Lịch đầy đủ",
+  "noMatches": "Chưa có trận trong lịch.",
+  "cardNews": "Tin tức",
+  "cardSchedule": "Lịch thi đấu",
+  "cardStandings": "Bảng xếp hạng"
+}

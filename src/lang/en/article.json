@@ -1,0 +1,11 @@
+{
+  "backToNews": "← All news",
+  "authorFallback": "Editor",
+  "userFallback": "User",
+  "jsonLdAuthor": "Author",
+  "related": "More from this section",
+  "commentsHeading": "Comments ({count})",
+  "commentsTitle": "Comments",
+  "noComments": "No comments yet.",
+  "metaFallbackTitle": "News"
+}
